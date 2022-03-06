@@ -1,7 +1,5 @@
-import { BadRequestException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { ReturnModelType } from '@typegoose/typegoose';
-import { compareSync } from 'bcryptjs';
 import { InjectModel } from 'nestjs-typegoose';
 import { StrategyOptions, Strategy, ExtractJwt } from 'passport-jwt';
 import { User } from 'src/db/models/user.model';

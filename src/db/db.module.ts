@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { TypegooseModule } from 'nestjs-typegoose';
 import { DbService } from './db.service';
 import { Article } from './models/article.model';
@@ -6,6 +6,7 @@ import { User } from './models/user.model';
 
 const models = TypegooseModule.forFeature([User, Article]);
 
+@Global()
 @Module({
   imports: [
     TypegooseModule.forRootAsync({
