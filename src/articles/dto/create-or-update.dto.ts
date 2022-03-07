@@ -11,10 +11,10 @@ export class CreateOrUpdateArticeDto {
   @ApiProperty({ description: '文章作者', example: 'arkwq' })
   @IsNotEmpty({ message: '作者不能为空' })
   author: string
-  @ApiProperty({ description: '文章创建日期', example: '1997-09-06' })
-  createdAt: Date
-  @ApiProperty({ description: '文章更新日期', example: '1997-09-06' })
-  updatedAt: Date
+  @ApiProperty({ description: '文章创建日期', example: '空值' })
+  createdAt: string
+  @ApiProperty({ description: '文章更新日期', example: '空值' })
+  updatedAt: string
   @ApiProperty({ description: '文章简介', example: '不如从了老衲吧' })
   introduction: string
   @ApiProperty({ description: '文章内容', example: '你这泼猴' })

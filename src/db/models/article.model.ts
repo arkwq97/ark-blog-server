@@ -1,22 +1,24 @@
 import { prop } from '@typegoose/typegoose';
 
 export class Article {
-  @prop()
-  public id: string
-  @prop()
+  @prop({
+    unique: true
+  })
   title: string
   @prop()
   type: string
   @prop()
   author: string
   @prop()
-  createdAt: Date
+  createdAt: string
   @prop()
-  updatedAt: Date
+  updatedAt: string
   @prop()
   viewCount: number
   @prop()
   introduction: string
-  @prop()
+  @prop({
+    select: false
+  })
   content: string
 }

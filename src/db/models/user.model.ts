@@ -2,7 +2,9 @@ import { Prop } from "@typegoose/typegoose";
 import { hashSync } from 'bcryptjs'
 
 export class User {
-  @Prop()
+  @Prop({
+    unique: true
+  })
   username: string
   @Prop({
     select: false,
